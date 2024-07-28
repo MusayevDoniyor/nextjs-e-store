@@ -2,11 +2,11 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="container mx-auto px-8 py-8">
-      <h1 className="text-4xl font-bold mb-4 text-slate-800">
+    <div className="container mx-auto px-8 py-12">
+      <h1 className="text-5xl font-extrabold mb-6 text-slate-800 text-center animate-fadeIn">
         Welcome to E-STORE
       </h1>
-      <p className="text-lg mb-8 text-slate-600">
+      <p className="text-lg mb-10 text-slate-600 text-center animate-fadeIn delay-1s">
         Discover the Best Deals on Top Products
       </p>
 
