@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -126,7 +127,29 @@ const About = () => {
         </p>
       </section>
 
-      <p className="text-center text-lg font-semibold text-slate-800 animate-fadeIn delay-6s">
+      <section className="mb-12 animate-fadeIn delay-6s">
+        <h2 className="text-3xl font-semibold mb-6 text-slate-800">
+          Explore More
+        </h2>
+
+        <div className="flex gap-4 justify-center">
+          <Link
+            href="/about/teacher"
+            className="bg-cyan-600 text-white py-2 px-4 rounded-lg shadow-md hover:bg-cyan-700 transition-colors"
+          >
+            Teacher's Page
+          </Link>
+
+          <Link
+            href="/about/student"
+            className="bg-cyan-600 text-white py-2 px-4 rounded-lg shadow-md hover:bg-cyan-700 transition-colors"
+          >
+            Students' Page
+          </Link>
+        </div>
+      </section>
+
+      <p className="text-center text-lg font-semibold text-slate-800 animate-fadeIn delay-7s">
         Thank you for choosing E-STORE. We look forward to serving you with the
         best shopping experience!
       </p>
