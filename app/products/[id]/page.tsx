@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useRouter } from "next/navigation"; // Use useRouter from 'next/navigation'
 
 interface Product {
   id: number;
@@ -36,41 +35,41 @@ const Product = ({ params }: { params: { id: string } }) => {
 
   if (loading)
     return (
-      <div className="container mx-auto px-8 py-12 text-center">
-        <p className="text-lg font-semibold text-slate-800">Loading...</p>
+      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <p className="text-lg text-gray-700">Loading...</p>
       </div>
     );
   if (error)
     return (
-      <div className="container mx-auto px-8 py-12 text-center">
-        <p className="text-lg font-semibold text-red-600">{error}</p>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+        <p className="text-lg text-red-500">{error}</p>
+        <button
+          onClick={() => window.location.reload()}
+          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        >
+          Retry
+        </button>
       </div>
     );
 
   if (!product)
     return (
-      <div className="container mx-auto px-8 py-12 text-center">
-        <p className="text-lg font-semibold text-slate-800">
-          Product not found
-        </p>
+      <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <p className="text-lg text-gray-700">Product not found</p>
       </div>
     );
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-3xl mx-auto bg-slate-100 p-6 rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
+      <div className="flex flex-col items-center">
         <img
           src={product.image}
           alt={product.title}
-          className="w-full h-96 object-cover rounded-t-lg mb-4"
+          className="w-full max-w-sm object-cover rounded-md mb-4"
         />
-        <h1 className="text-3xl font-bold mb-4 text-slate-800 text-center">
-          {product.title}
-        </h1>
-        <p className="text-xl font-semibold mb-2 text-slate-800 text-center">
-          Price: ${product.price}
-        </p>
-        <p className="text-slate-600 text-center">{product.description}</p>
+        <h1 className="text-2xl font-bold mb-2">{product.title}</h1>
+        <p className="text-xl text-green-500 mb-4">Price: ${product.price}</p>
+        <p className="text-gray-700">{product.description}</p>
       </div>
     </div>
   );

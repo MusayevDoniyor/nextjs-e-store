@@ -94,7 +94,7 @@ const Teachers = () => {
         {teachers.map((teacher) => (
           <div
             key={teacher.id}
-            className="bg-slate-100 p-6 rounded-lg shadow-lg"
+            className="bg-slate-100 p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
           >
             <img
               src={teacher.image}

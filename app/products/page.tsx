@@ -12,7 +12,7 @@ interface Product {
   image: string;
 }
 
-const api_url = "https://fakestoreapi.com/product";
+const api_url = "https://fakestoreapi.com/products";
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);

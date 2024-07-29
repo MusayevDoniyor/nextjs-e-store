@@ -9,7 +9,7 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="py-4 px-6 bg-slate-800 text-white">
+    <header className="py-5 px-6 bg-slate-800 text-white">
       <div className="flex justify-between items-center">
         <Link href="/" className="font-semibold text-2xl">
           E-STORE
